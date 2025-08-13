@@ -17,7 +17,7 @@ st.set_page_config(page_title="Math Solver & Search Assistant", page_icon="🧮"
 st.title("🧮 Text to Math Problem Solver using Gemma 2")
 
 # Initialize the language model
-llm = ChatGroq(model="Gemma2-9b-It", groq_api_key=groq_api_key)
+llm = ChatGroq(model="llama-3.1-8b-instant", groq_api_key=groq_api_key)
 
 # === Tool 1: Wikipedia Search ===
 wikipedia_tool = Tool(
@@ -84,6 +84,7 @@ if st.button("Get Answer"):
         st.chat_message("assistant").write(response)
     else:
         st.warning("Please enter a question.")
+
 
 
 
